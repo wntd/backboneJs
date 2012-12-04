@@ -1,6 +1,6 @@
 require.config({
 	paths: {
-		jquery: 'libs/jquery',
+		jquery: 'libs/jquery-1.8.3.min',
 		underscore: 'libs/underscore-min',
 		backbone: 'libs/backbone-optamd3-min',
 		bootstrap: 'libs/bootstrap.min',
@@ -8,8 +8,8 @@ require.config({
 	}
 });
 
-require(['views/app'], function(AppView) {
+require(['app'], function(App) {
 
-	var app_view = new AppView;
+	App.initialize();
 
 });
