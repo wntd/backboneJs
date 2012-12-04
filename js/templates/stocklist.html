@@ -1,0 +1,27 @@
+<table id="stockTable" class="table table-striped">
+<thead>
+<tr>
+<th class="text-center">#ID</th>
+<th>Item</th>
+<th class="text-center">ASA</th>
+<th class="text-center">Tipo</th>
+<th class="text-center">Validade</th>
+<th class="text-center">Valor</th>
+<th class="text-center">Stock</th>
+</tr>
+</thead>
+
+<tbody>                             
+<% $.each(items,function(){ %>
+<tr data-id=<%= this.id %>>
+<td class="text-center"><a class="edit"><%= this.id %></a></td>
+<td><%= this.item %></td>
+<td class="text-center"><%= this.asa %></td>
+<td class="text-center"> <%= this.tipo %></td>
+<td class="text-center"><%= this.validade %></td>
+<td class="text-center"><%= this.valor %></td>
+<td class="text-center"><%= this.stock %></td>
+</tr>    
+<% }) %>
+</tbody>
+</table>
